@@ -1,0 +1,62 @@
+body {
+    background: white;
+    margin: 0;
+}
+
+body a {
+    text-decoration: none;
+}
+
+body ul {
+    margin: 0;
+    padding: 0;
+}
+
+body ul li {
+    list-style: none;
+}
+
+/*Header*/
+
+header {
+    position: relative;
+}
+
+header .close-button {
+    position: absolute;
+    z-index: 1;
+}
+
+header .person {
+    display: flex;
+    align-items: flex-end;
+    height: 220px;
+    border-bottom: solid 1px rgb(35,33,47);
+    padding: 10px 30px;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT8cOFrA4NoID6nRF9MRKBwYuLwmh4NQggLEZ5xwnwzYHXb5QKQ") no-repeat center;
+    background-size: 160%;
+}
+
+header .person .main-info {
+    color: white;
+}
+
+header .side-nav {
+    position: fixed;
+    width: 270px;
+    height: 100%;
+    background: rgba(54,52,65);
+}
+
+header .side-nav nav ul li {
+    border-bottom: solid 1px rgb(35,33,47);
+}
+
+header .side-nav nav ul li a {
+    display: block;
+    padding: 10px 30px;
+    color: white;
+    font-size: 18px;
+}
+
+/*End-Header*/
