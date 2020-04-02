@@ -5,14 +5,18 @@
     <meta title="Portfolio | Home">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Gotu|Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
-    <div class="close-button">
-        <button>X</button>
-    </div>
-    <div class="side-nav">
-        <div class="person"> <!== TODO bg image =>
+    <div class="side-nav active">
+        <div class="close-button">
+            <button>
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="person"> <!-- TODO bg image -->
             <div class="main-info">
                 <h3>Name</h3>
                 <p>Profession</p>
@@ -31,7 +35,21 @@
         </nav>
     </div>
 </header>
-<main></main>
+<main class="collapsed">
+    <section class="banners">
+        <div class="item">
+            <img src="img/1.jpeg" alt="">
+
+            <div class="content">
+                <h2>Some heading</h2>
+                <p>Lorem ipsum — классический текст-«рыба». Является искажённым отрывком из философского трактата Марка Туллия</p>
+                <button type="button" class="btn btn-red rounded mt-3">
+                    <a href="#">Hire me!</a>
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
 <footer></footer>
 </body>
 </html>
