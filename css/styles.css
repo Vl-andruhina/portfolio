@@ -22,6 +22,8 @@ body ul li {
 
 :root {
     /** Colors **/
+    --nav-color: rgb(54, 52, 65);
+
     --main-color-red: rgb(255, 75, 100);
 
     /** Other **/
@@ -49,6 +51,38 @@ body ul li {
     margin-top: 10px;
 }
 
+.ml-2{
+    margin-left: 25px;
+}
+
+.ml-3 {
+    margin-left: 20px;
+}
+
+.ml-4 {
+    margin-left: 15px;
+}
+
+.ml-5 {
+    margin-left: 10px;
+}
+
+.mr-3 {
+    margin-right:  20px;
+}
+
+.mr-4 {
+    margin-right: 15px;
+}
+
+.mr-5 {
+    margin-right: 10px;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
 .mb-3 {
     margin-bottom: 20px;
 }
@@ -61,6 +95,20 @@ body ul li {
     margin-bottom: 10px;
 }
 
+.mx-3 {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.mx-4 {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.mx-5 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
 /*End Margins*/
 
 
@@ -72,15 +120,23 @@ body ul li {
 }
 
 .py-2 {
-    padding: 25px 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .py-3 {
-    padding: 20px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .py-4 {
-    padding: 15px 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.py-5 {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .px-1 {
@@ -89,16 +145,25 @@ body ul li {
 }
 
 .px-2 {
-    padding: 0 25px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .px-3 {
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .px-4 {
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
+
+.px-5 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 
 /* End Paddings */
 
@@ -111,6 +176,13 @@ body ul li {
     justify-content: space-between;
 }
 
+.justify-center {
+    justify-content: center;
+}
+
+.wrap {
+    flex-flow: wrap;
+}
 
 /*End*/
 
@@ -152,18 +224,29 @@ body ul li {
     font-size: 24px;
 }
 
-.title.underlined {
+.title.underlined,  .link.underlined {
     position: relative;
 }
 
 .underlined:after {
     content: "";
     position: absolute;
-    background: var(--main-color-red);
+    width: 100%;
     height: 2px;
-    width: 65%;
     bottom: 0;
     left: 0;
+}
+
+.title.underlined:after {
+    width: 65%;
+}
+
+.underlined.red:after {
+    background: var(--main-color-red);
+}
+
+.underlined.white:after {
+    background: white;
 }
 
 /*End modules*/
@@ -206,7 +289,7 @@ header .person {
     height: 220px;
     border-bottom: solid 1px rgb(35, 33, 47);
     padding: 10px 30px;
-    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT8cOFrA4NoID6nRF9MRKBwYuLwmh4NQggLEZ5xwnwzYHXb5QKQ") no-repeat center;
+    background: url("https://prm.ua/wp-content/uploads/2019/09/Kianu-Rivz-skrin-.png") no-repeat center;
     background-size: 160%;
 }
 
@@ -219,7 +302,8 @@ header .side-nav {
     position: fixed;
     width: 270px;
     height: 100%;
-    background: rgba(54, 52, 65);
+    background:  var(--nav-color);
+    z-index: 9999;
 }
 
 header .side-nav.active {
@@ -264,6 +348,8 @@ main section.banners .item {
     justify-content: center;
     height: 400px; /*TODO fix static height*/
     background: #3e3b51;
+    overflow: hidden;
+    height: 420px;
 }
 
 main section.banners .item .content {
@@ -281,16 +367,14 @@ main section.banners .item .content {
 
 main section.banners .item img {
     width: 100%;
+    object-fit: cover;
 }
+
+
 
 /*End Banners*/
 
 /** Portfolio **/
-
-section.portfolio {
-
-}
-
 
 section.portfolio .categories ul {
     border-bottom: 2px solid #dfdfdf;
@@ -307,3 +391,188 @@ section.portfolio .categories ul li:hover {
 }
 
 /** EndPortfolio **/
+
+
+/** Portfolio blocks **/
+
+.blocks{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.block{
+    width: 5in;
+    height: 5in;
+}
+
+.img_back img{
+    display: flex;
+    width: 100%;
+    height: 320.48px; 
+}
+
+.text.bl{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.block .text a{
+    margin-bottom: 15px;
+    color: white;
+}
+
+.text.bl.b1 {
+    background-color: #01b9c3;
+}
+
+.text.bl.b2 {
+    background-color: #1e2e3e;
+}
+
+.text.bl.b3 {
+    background-color: #3f3d3e;;
+}
+
+.text.bl.b4 {
+    background-color: #0093b5;
+}
+
+.text.bl.b5 {
+    background-color: #353541;
+}
+
+.text.bl.b6 {
+    background-color: #6176ab;
+}
+
+
+
+
+/*.title.inblock{*/
+/*    width: 100%; */
+/*    margin-bottom: 0;  */
+/*}*/
+
+/** End Portfolio blocks **/
+
+/** Footer **/
+
+.form-wrap{
+    width: 5in;
+    position: relative;
+}
+
+.form-wrap:after {
+    content: "";
+    position: absolute;
+    background: rgb(156, 156, 156);
+    width: 1px;
+    height: 90%;
+    top: 0;
+    right: -15px;
+}
+
+.form-wrap , .form-wrap form{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.form-wrap form {
+    padding-right: 40px;
+}
+
+.form-wrap form input, .form-wrap form textarea {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.form-wrap form input {
+    height: 30px;
+    padding: 0 7px;
+}
+
+.form-wrap form textarea {
+    height: 100px;
+    resize: none;
+    padding: 7px;
+}
+
+.form-wrap h2{
+    color: rgb(83, 83, 83);
+}
+.contact-info {
+    width: 5in;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-block h3{
+   margin: 0;
+}
+
+.contact-info {
+
+    flex-direction: column;
+}
+
+.contact-block p{
+    font-size: 10px;
+    display: inline;
+}
+
+.contact-block{
+    align-items: center;
+    padding: 25px;
+    color: rgb(83, 83, 83);
+}
+.contact-block img{
+    margin-right: 30px;
+}
+
+.copyright{
+    margin-top: 120px;
+}
+
+.copyright p{
+    margin-top: 0;
+    font-size: 10px;
+    color: rgb(83, 83, 83);
+}
+
+.copyright div img{
+    padding: 10px;
+}
+
+.copyright-img{
+    position: relative;
+}
+
+.copyright-img:before{
+    content: "";
+    position: absolute;
+    background: rgb(156, 156, 156);
+    width: 3px;
+    height: 100%; 
+    left: 0;
+    bottom: 0;
+}
+
+/** End Footer **/
+
+
+/** About Page */
+
+.message {
+    width: 390px;
+    padding: 15px;
+    background: var(--nav-color);
+    border-radius: 10px;
+    color: white;
+}
+
+.message h4 {
+    margin: 0;
+}
